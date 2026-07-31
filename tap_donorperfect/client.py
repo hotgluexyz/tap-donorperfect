@@ -11,6 +11,7 @@ import backoff
 import requests
 from hotglue_singer_sdk.authenticators import APIKeyAuthenticator
 from hotglue_singer_sdk.exceptions import FatalAPIError, RetriableAPIError
+from hotglue_singer_sdk.tap_base import InvalidCredentialsError
 from hotglue_singer_sdk.helpers._typing import is_datetime_type
 from hotglue_singer_sdk.helpers.jsonpath import extract_jsonpath
 from hotglue_singer_sdk.streams import RESTStream
@@ -175,13 +176,29 @@ class DonorPerfectStream(RESTStream):
         type_dict = self.schema.get("properties", {}).get(self.replication_key)
         return is_datetime_type(type_dict)
 
+    #: Substrings in an API error that indicate an authentication/authorization failure.
+    UNAUTHORIZED_ERROR_MARKERS = ("invalid token", "user not authorized", "bad api key")
+
     def check_body_for_error(self, body: dict) -> None:
-        if self.error_response_json_path:
-            error_response = next(
-                extract_jsonpath(self.error_response_json_path, input=body), None
-            )
-            if error_response:
-                raise Exception(f"Error: {error_response}")
+        if not self.error_response_json_path:
+            return
+
+        # Check for error in the result object
+        if body.get("result", {}).get("error") not in [None, ""]:
+            raise FatalAPIError(f"Error: {body['result']['error']}")
+
+        error_response = next(
+            extract_jsonpath(self.error_response_json_path, input=body), None
+        )
+
+        if not error_response:
+            return
+
+        normalized_error = error_response.lower()
+        if any(marker in normalized_error for marker in self.UNAUTHORIZED_ERROR_MARKERS):
+            raise InvalidCredentialsError("DonorPerfect API key is unauthorized.")
+
+        raise Exception(f"Error: {error_response}")
 
     def parse_response(self, response: requests.Response) -> Iterable[dict]:
         if "text/xml" in response.headers.get("Content-Type", ""):
