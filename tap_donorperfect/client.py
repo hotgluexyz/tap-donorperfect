@@ -183,8 +183,10 @@ class DonorPerfectStream(RESTStream):
         if not self.error_response_json_path:
             return
 
-        if body.get("result", {}).get("error") not in [None, ""]:
-            raise FatalAPIError(f"Error: {body['result']['error']}")
+        result = body.get("result")
+        error = result.get("error") if isinstance(result, dict) else None
+        if error not in [None, ""]:
+            raise FatalAPIError(f"Error: {error}")
 
         error_response = next(
             extract_jsonpath(self.error_response_json_path, input=body), None
