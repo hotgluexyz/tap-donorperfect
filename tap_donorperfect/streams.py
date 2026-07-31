@@ -129,12 +129,33 @@ class FlagsStream(DonorPerfectStream):
         th.Property("flag", th.StringType),
         th.Property("import_id", th.StringType),
         th.Property("description", th.StringType),
+        th.Property("inactive", th.StringType),
+        th.Property("start_date", th.StringType),
+        th.Property("end_date", th.StringType),
+        th.Property("comments", th.StringType),
+        th.Property("code_id", th.StringType),
         th.Property("internal_modified_date", th.DateTimeType),
     ).to_dict()
     params = [
         {
             "name": "action",
-            "value": "SELECT dpflags.*, dc.description, dp.internal_modified_date FROM dpflags LEFT JOIN dpcodes dc ON dc.code = dpflags.flag LEFT JOIN dp ON dp.donor_id = dpflags.donor_id WHERE {replication_key}>'{replication_key_value}' ORDER BY {replication_key} DESC OFFSET {next_page_token | 0} ROWS FETCH NEXT 100 ROWS ONLY;",
+            "value": (
+                "SELECT "
+                "dpflags.*, "
+                "dc.description, "
+                "dc.inactive, "
+                "dc.start_date, "
+                "dc.end_date, "
+                "dc.comments, "
+                "dc.code_id, "
+                "dp.internal_modified_date "
+                "FROM dpflags "
+                "LEFT JOIN dpcodes dc ON dc.code = dpflags.flag AND dc.field_name = 'FLAG' "
+                "LEFT JOIN dp ON dp.donor_id = dpflags.donor_id "
+                "WHERE {replication_key}>'{replication_key_value}' "
+                "ORDER BY {replication_key} DESC "
+                "OFFSET {next_page_token | 0} ROWS FETCH NEXT 100 ROWS ONLY;"
+            ),
         }
     ]
 
