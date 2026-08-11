@@ -161,7 +161,7 @@ class DonorPerfectStream(RESTStream):
             or 500 <= response.status_code < 600
         ):
             raise RetriableAPIError(self.response_error_message(response), response)
-        if response.status_code in [401, 403]:
+        if response.status_code == 401:
             raise InvalidCredentialsError(self.response_error_message(response))
         if 400 <= response.status_code < 500:
             raise FatalAPIError(self.response_error_message(response))
