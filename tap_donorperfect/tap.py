@@ -4,6 +4,8 @@ from __future__ import annotations
 
 from hotglue_singer_sdk import Stream, Tap
 from hotglue_singer_sdk import typing as th
+from hotglue_singer_sdk.helpers.capabilities import AlertingLevel
+from hotglue_singer_sdk.tap_base import InvalidCredentialsError
 
 from tap_donorperfect.streams import (
     DonorAddressesStream,
@@ -20,6 +22,11 @@ STREAM_TYPES = [
 
 class TapDonorperfect(Tap):
     name = "tap-donorperfect"
+
+    alerting_level = AlertingLevel.ERROR
+    exception_alerting_level_map = {
+        InvalidCredentialsError: AlertingLevel.NONE,
+    }
 
     config_jsonschema = th.PropertiesList(
         th.Property(

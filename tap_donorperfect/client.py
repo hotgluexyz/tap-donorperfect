@@ -161,6 +161,8 @@ class DonorPerfectStream(RESTStream):
             or 500 <= response.status_code < 600
         ):
             raise RetriableAPIError(self.response_error_message(response), response)
+        if response.status_code == 401:
+            raise InvalidCredentialsError(self.response_error_message(response))
         if 400 <= response.status_code < 500:
             raise FatalAPIError(self.response_error_message(response))
 
@@ -177,7 +179,7 @@ class DonorPerfectStream(RESTStream):
         return is_datetime_type(type_dict)
 
     #: Substrings in an API error that indicate an authentication/authorization failure.
-    UNAUTHORIZED_ERROR_MARKERS = ("invalid token", "user not authorized", "bad api key")
+    UNAUTHORIZED_ERROR_MARKERS = ("invalid token", "user not authorized", "bad api key", "login failed")
 
     def check_body_for_error(self, body: dict) -> None:
         if not self.error_response_json_path:
