@@ -121,6 +121,72 @@ class DonorPerfectStream(RESTStream):
             params["next_page_token"] = next_page_token
         return params
 
+    def _build_count_query(self, action: str) -> Optional[str]:
+        """Build a ``SELECT COUNT(*)`` query from the stream's sync query.
+
+        Keeps the original ``FROM``/``WHERE`` so the estimate uses the same
+        replication filters as sync. The API rejects COUNT queries carrying
+        ``ORDER BY``/``OFFSET``/``FETCH``, so that trailing part is dropped.
+        """
+        lower_action = action.lower()
+        from_index = lower_action.find(" from ")
+        if from_index < 0:
+            return None
+        tail = action[from_index:]
+        order_index = tail.lower().find(" order by ")
+        if order_index >= 0:
+            tail = tail[:order_index]
+        return f"SELECT COUNT(*) AS record_count {tail.strip().rstrip(';')}"
+
+    def get_estimated_record_count(self) -> Optional[int]:
+        """Return the total record count under the sync filters, or None."""
+        try:
+            # Mirror sync: seed the replication value the same way get_url_params does.
+            self.get_incremental_sync_params(None)
+            action = next(
+                (
+                    param["value"]
+                    for param in self.params or []
+                    if param["name"] == "action"
+                ),
+                None,
+            )
+            if not action:
+                return None
+            count_query = self._build_count_query(action)
+            if not count_query:
+                return None
+            count_query = self.get_field_value(count_query)
+            request = requests.Request("GET", self.url_base)
+            self.authenticator.authenticate_request(request)
+            request.params.update({"action": count_query})
+            response = self.requests_session.send(
+                self.requests_session.prepare_request(request), timeout=60
+            )
+            self.validate_response(response)
+            if "text/xml" in response.headers.get("Content-Type", ""):
+                body = xml_to_dict(response)
+            else:
+                body = response.json()
+            self.check_body_for_error(body)
+            record = body.get("result", {}).get("record")
+            if isinstance(record, list):
+                record = record[0] if record else None
+            fields = record.get("field") if record else None
+            if isinstance(fields, dict):
+                fields = [fields]
+            for field in fields or []:
+                if isinstance(field, dict) and field.get("@name") == "record_count":
+                    return int(field["@value"])
+            return None
+        except Exception as exc:
+            self.logger.warning(
+                "Estimated record count not available for stream '%s': %s",
+                self.name,
+                exc,
+            )
+            return None
+
     def request_decorator(self, func: Callable) -> Callable:
         decorator: Callable = backoff.on_exception(
             backoff.expo,
