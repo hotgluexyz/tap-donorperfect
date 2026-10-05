@@ -121,6 +121,33 @@ class DonorPerfectStream(RESTStream):
             params["next_page_token"] = next_page_token
         return params
 
+    def get_estimated_record_count(self) -> Optional[int]:
+        """Count the same joined rows and replication window as the sync query."""
+        replication_key_value = self.replication_key_value
+        try:
+            params = self.get_url_params(None, None)
+            # The list queries share SELECT ... FROM ... ORDER BY ... pagination.
+            from_clause = re.search(
+                r"\bFROM\b.*?(?=\bORDER BY\b)", params["action"], re.IGNORECASE
+            ).group()
+            params["action"] = f"SELECT COUNT(*) AS estimated_count {from_clause}"
+            request = self.build_prepared_request(
+                method=self.rest_method,
+                url=self.get_url(None),
+                params=params,
+                headers=self.http_headers,
+            )
+            response = self._request(request, None)
+            body = xml_to_dict(response)
+            self.check_body_for_error(body)
+            return int(body["result"]["record"]["field"]["@value"])
+        except Exception as error:
+            # Request exception messages can contain the API key in the URL.
+            self.logger.warning("Unable to estimate record count: %s", type(error).__name__)
+            return None
+        finally:
+            self.replication_key_value = replication_key_value
+
     def request_decorator(self, func: Callable) -> Callable:
         decorator: Callable = backoff.on_exception(
             backoff.expo,
