@@ -108,6 +108,40 @@ class DonorPerfectStream(RESTStream):
         self.replication_key_value = formatted_start_date
         return {"internal_modified_date": formatted_start_date}
 
+    def get_estimated_record_count(self) -> Optional[int]:
+        try:
+            action = next(p["value"] for p in self.params if p["name"] == "action")
+            upper_action = action.upper()
+            from_index = upper_action.index(" FROM ")
+            try:
+                order_index = upper_action.index(" ORDER BY ", from_index)
+            except ValueError:
+                order_index = len(action)
+            count_query = (
+                f"select COUNT(*){action[from_index:order_index].rstrip().rstrip(';')};"
+            )
+            start_date = self.get_starting_time(None, is_inclusive=True)
+            count_query = count_query.replace(
+                "{replication_key}", self.replication_key
+            ).replace("{replication_key_value}", start_date.strftime("%Y-%m-%d %H:%M:%S"))
+            response = self.requests_session.get(
+                self.url_base,
+                params={
+                    "apikey": unquote(self.config["api_token"]),
+                    "action": count_query,
+                },
+                timeout=self.timeout,
+            )
+            self.validate_response(response)
+            body = xml_to_dict(response)
+            self.check_body_for_error(body)
+            return int(body["result"]["record"]["field"]["@value"])
+        except Exception as e:
+            self.logger.warning(
+                "Failed to estimate record count for stream=%s: %s", self.name, e
+            )
+            return None
+
     def get_url_params(
         self, context: Optional[dict], next_page_token: Optional[Any]
     ) -> Dict[str, Any]:
