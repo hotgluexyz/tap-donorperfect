@@ -121,6 +121,27 @@ class DonorPerfectStream(RESTStream):
             params["next_page_token"] = next_page_token
         return params
 
+    def get_estimated_record_count(self) -> Optional[int]:
+        try:
+            params = self.get_url_params(context=None, next_page_token=None)
+            _, query = params["action"].split(" FROM ", 1)
+            query, _, _ = query.rpartition(" ORDER BY ")
+            params["action"] = f"SELECT COUNT(*) AS estimated_record_count FROM {query}"
+            prepared_request = self.build_prepared_request(
+                method=self.rest_method,
+                url=self.get_url(context=None),
+                params=params,
+                headers=self.http_headers,
+                json=self.prepare_request_payload(context=None, next_page_token=None),
+            )
+            response = self.request_decorator(self._request)(prepared_request, None)
+            body = xml_to_dict(response)
+            record = next(extract_jsonpath(self.records_jsonpath, input=body))
+            return int(record["field"]["@value"])
+        except Exception as exc:
+            self.logger.warning("Failed to estimate record count: %s", exc)
+            return None
+
     def request_decorator(self, func: Callable) -> Callable:
         decorator: Callable = backoff.on_exception(
             backoff.expo,
