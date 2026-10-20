@@ -13,7 +13,7 @@ license = "Apache 2.0"
 [tool.poetry.dependencies]
 python = "<3.11,>=3.7.1"
 requests = "^2.25.1"
-hotglue-singer-sdk = "^1.0.3"
+hotglue-singer-sdk = ">=1.0.15"
 cached-property = "^1.5.2"
 xmltodict = "^0.13.0"
 lxml = "4.9.3"

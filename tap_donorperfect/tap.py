@@ -49,7 +49,6 @@ class TapDonorperfect(Tap):
 
     @classmethod
     def access_token_support(cls, connector=None):
-        """Return static-token support for the Hotglue access-token flow."""
         return DonorPerfectAuthenticator, None
 
 

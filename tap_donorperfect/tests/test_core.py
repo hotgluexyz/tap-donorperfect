@@ -16,7 +16,13 @@ SAMPLE_CONFIG = {
 
 @pytest.mark.parametrize(
     "standard_tap_test",
-    get_standard_tap_tests(tap_class=TapDonorperfect, config=SAMPLE_CONFIG)[:2],
+    [
+        test
+        for test in get_standard_tap_tests(
+            tap_class=TapDonorperfect, config=SAMPLE_CONFIG
+        )
+        if test.__name__ != "_test_stream_connections"
+    ],
 )
 def test_standard_tap_features(standard_tap_test):
     """Run the SDK checks that do not require a live DonorPerfect account."""
