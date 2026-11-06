@@ -1,0 +1,2488 @@
+{
+  "streams": [
+    {
+      "tap_stream_id": "donor_addresses",
+      "replication_key": "internal_modified_date",
+      "replication_method": "INCREMENTAL",
+      "key_properties": [
+        "address_id"
+      ],
+      "schema": {
+        "properties": {
+          "address_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "donor_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "opt_line": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "address": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "address2": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "city": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "state": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "zip": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "country": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "address_type": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "getmail": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "created_by": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "created_date": {
+            "format": "date-time",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "modified_by": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "modified_date": {
+            "format": "date-time",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "use_main_name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "use_main_address": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "title": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "first_name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "last_name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "seasonal_from_date": {
+            "format": "date-time",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "seasonal_to_date": {
+            "format": "date-time",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "suffix": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "prof_title": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "salutation": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "email": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "home_phone": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "business_phone": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "fax_phone": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "mobile_phone": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "start_date": {
+            "format": "date-time",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "end_date": {
+            "format": "date-time",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "address3": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "address4": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ukcounty": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "import_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "middle_name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "org_rec": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "no_email": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "no_email_reason": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "email_type": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "email_status": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "email_status_date": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "opt_out_source": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "opt_out_reason": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "cc_contact_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "wl_import_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "geocoding_lattitude": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "geocoding_longitude": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "internal_modified_date": {
+            "format": "date-time",
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "type": "object"
+      },
+      "stream": "donor_addresses",
+      "metadata": [
+        {
+          "breadcrumb": [
+            "properties",
+            "address_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "donor_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "opt_line"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "address"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "address2"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "city"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "state"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "zip"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "country"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "address_type"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "getmail"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_by"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "modified_by"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "modified_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "use_main_name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "use_main_address"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "title"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "first_name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "last_name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "seasonal_from_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "seasonal_to_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "suffix"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "prof_title"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "salutation"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "email"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "home_phone"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "business_phone"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "fax_phone"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "mobile_phone"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "start_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "end_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "address3"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "address4"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ukcounty"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "import_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "middle_name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "org_rec"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "no_email"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "no_email_reason"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "email_type"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "email_status"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "email_status_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "opt_out_source"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "opt_out_reason"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "cc_contact_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "wl_import_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "geocoding_lattitude"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "geocoding_longitude"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "internal_modified_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "inclusion": "available",
+            "selected": false,
+            "table-key-properties": [
+              "address_id"
+            ],
+            "valid-replication-keys": [
+              "internal_modified_date"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "donors",
+      "replication_key": "internal_modified_date",
+      "replication_method": "INCREMENTAL",
+      "key_properties": [
+        "donor_id"
+      ],
+      "schema": {
+        "properties": {
+          "donor_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "first_name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "last_name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "middle_name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "suffix": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "title": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "salutation": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "prof_title": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "opt_line": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "address": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "address2": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "city": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "state": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "zip": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "country": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "address_type": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "home_phone": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "business_phone": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "fax_phone": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "mobile_phone": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "email": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "org_rec": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "donor_type": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "nomail": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "nomail_reason": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "narrative": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "tag_date": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "initial_gift_date": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "last_contrib_date": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "last_contrib_amt": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ytd": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ly_ytd": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ly2_ytd": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ly3_ytd": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ly4_ytd": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ly5_ytd": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ly6_ytd": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "cytd": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ly_cytd": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ly2_cytd": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ly3_cytd": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ly4_cytd": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ly5_cytd": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ly6_cytd": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "autocalc1": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "autocalc2": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "autocalc3": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "gift_total": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "gifts": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "max_date": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "max_amt": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "avg_amt": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "yrs_donated": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "created_by": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "created_date": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "modified_by": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "modified_date": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "donor_rcpt_type": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "address3": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "address4": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ukcounty": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "gift_aid_eligible": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "initial_temp_record_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "frequent_temp_record_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "recent_temp_record_id": {
+            "format": "date-time",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "import_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "receipt_delivery": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "no_email": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "no_email_reason": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "email_type": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "email_status": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "email_status_date": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "opt_out_source": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "opt_out_reason": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "CC_donor_import_time": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "cc_contact_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "wl_import_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "WL_Action": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "geocoding_lattitude": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "geocoding_longitude": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "quickbooks_customer_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "dp_record_type": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "DPI_RFM_ASOFDATE": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "DPI_RQUINTILE": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "DPI_FQUINTILE": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "DPI_MQUINTILE": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "DPI_RFM_COMB": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "DPI_RFM_P_SEG": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "DPI_RFM_U_SEG": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "DPI_RFM_AFP": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "internal_modified_date": {
+            "format": "date-time",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "address_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "em_campaign": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "em_campaign_status": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "contact_state": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "em_event_status_date": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "em_bounce_reason": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "contact_email": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "activity_code": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "type": "object"
+      },
+      "stream": "donors",
+      "metadata": [
+        {
+          "breadcrumb": [
+            "properties",
+            "donor_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "first_name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "last_name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "middle_name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "suffix"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "title"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "salutation"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "prof_title"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "opt_line"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "address"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "address2"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "city"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "state"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "zip"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "country"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "address_type"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "home_phone"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "business_phone"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "fax_phone"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "mobile_phone"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "email"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "org_rec"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "donor_type"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "nomail"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "nomail_reason"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "narrative"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "tag_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "initial_gift_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "last_contrib_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "last_contrib_amt"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ytd"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ly_ytd"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ly2_ytd"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ly3_ytd"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ly4_ytd"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ly5_ytd"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ly6_ytd"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "cytd"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ly_cytd"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ly2_cytd"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ly3_cytd"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ly4_cytd"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ly5_cytd"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ly6_cytd"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "autocalc1"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "autocalc2"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "autocalc3"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "gift_total"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "gifts"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "max_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "max_amt"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "avg_amt"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "yrs_donated"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_by"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "created_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "modified_by"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "modified_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "donor_rcpt_type"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "address3"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "address4"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ukcounty"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "gift_aid_eligible"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "initial_temp_record_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "frequent_temp_record_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "recent_temp_record_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "import_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "receipt_delivery"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "no_email"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "no_email_reason"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "email_type"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "email_status"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "email_status_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "opt_out_source"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "opt_out_reason"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CC_donor_import_time"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "cc_contact_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "wl_import_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "WL_Action"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "geocoding_lattitude"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "geocoding_longitude"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "quickbooks_customer_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "dp_record_type"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DPI_RFM_ASOFDATE"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DPI_RQUINTILE"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DPI_FQUINTILE"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DPI_MQUINTILE"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DPI_RFM_COMB"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DPI_RFM_P_SEG"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DPI_RFM_U_SEG"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DPI_RFM_AFP"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "internal_modified_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "address_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "em_campaign"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "em_campaign_status"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "contact_state"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "em_event_status_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "em_bounce_reason"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "contact_email"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "activity_code"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "inclusion": "available",
+            "selected": false,
+            "table-key-properties": [
+              "donor_id"
+            ],
+            "valid-replication-keys": [
+              "internal_modified_date"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "flags",
+      "replication_key": "internal_modified_date",
+      "replication_method": "INCREMENTAL",
+      "key_properties": [
+        "donor_id",
+        "flag"
+      ],
+      "schema": {
+        "properties": {
+          "donor_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "flag": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "import_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "description": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "inactive": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "start_date": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "end_date": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "comments": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "code_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "internal_modified_date": {
+            "format": "date-time",
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "type": "object"
+      },
+      "stream": "flags",
+      "metadata": [
+        {
+          "breadcrumb": [
+            "properties",
+            "donor_id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "flag"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "import_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "description"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "inactive"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "start_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "end_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "comments"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "code_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "internal_modified_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true,
+            "table-key-properties": [
+              "donor_id",
+              "flag"
+            ],
+            "valid-replication-keys": [
+              "internal_modified_date"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
