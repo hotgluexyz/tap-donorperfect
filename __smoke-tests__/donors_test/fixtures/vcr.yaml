@@ -1,0 +1,315 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.34.2
+    method: GET
+    uri: https://www.donorperfect.net/prod/xmlrequest.asp/?action=SELECT+COUNT%28%2A%29+AS+estimated_record_count+FROM+dp+WHERE+internal_modified_date%3E%272026-10-01+00%3A00%3A01%27&internal_modified_date=2026-10-01+00%3A00%3A01
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <result><record><field name="estimated_record_count" id="estimated_record_count"
+        value="5082"></field></record></result>'
+    headers:
+      CF-RAY:
+      - a567009dec091aee-GRU
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/xml; charset=utf-8
+      Date:
+      - Fri, 06 Nov 2026 20:56:01 GMT
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '159'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Cookie:
+      - __cf_bm=Fhu9U8q6IhN4BPajxtB9kpTvn591p6JyJ1dJAhYlLQY-1793998560.9444687-1.0.1.1-Oh.P6DkuHzXWS3iol9K.5mcVTw3QvEiQY6HAbVj7rjB7fiL1PBKwed9Az8_dsaqwNwF5ju.5Yw8QdwAOl296tB4.Kknyz1otGdXqmJy.TSgMWtXKNBtNM23pDtsYZdiL;
+        ApplicationGatewayAffinity=3de169042a7abffeb697f263a05689cd; ApplicationGatewayAffinityCORS=3de169042a7abffeb697f263a05689cd
+      User-Agent:
+      - python-requests/2.34.2
+    method: GET
+    uri: https://www.donorperfect.net/prod/xmlrequest.asp/?action=select+%2A+FROM+dp+WHERE+internal_modified_date%3E%272026-10-01+00%3A00%3A01%27+ORDER+BY+internal_modified_date+DESC+OFFSET+0+ROWS+FETCH+NEXT+100+ROWS+ONLY%3B&internal_modified_date=2026-10-01+00%3A00%3A01
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <result><record><field name="donor_id" id="donor_id" value="6327"></field><field
+        name="first_name" id="first_name" value="Fake-John"></field><field name="last_name"
+        id="last_name" value="Fake-Pittman"></field><field name="middle_name" id="middle_name"
+        value=""></field><field name="suffix" id="suffix" value=""></field><field
+        name="title" id="title" value="-Fallback-scrubbed-pmz"></field><field name="salutation"
+        id="salutation" value="-Fallback-scrubbed-VqYxGWNhj"></field><field name="prof_title"
+        id="prof_title" value=""></field><field name="opt_line" id="opt_line" value=""></field><field
+        name="address" id="address" value="Fake-751 Nicole Street Suite 251"></field><field
+        name="address2" id="address2" value=""></field><field name="city" id="city"
+        value="Fake-North Kevinville"></field><field name="state" id="state" value="-Fallback-scrubbed-Su"></field><field
+        name="zip" id="zip" value="52768"></field><field name="country" id="country"
+        value=""></field><field name="address_type" id="address_type" value=""></field><field
+        name="home_phone" id="home_phone" value=""></field><field name="business_phone"
+        id="business_phone" value=""></field><field name="fax_phone" id="fax_phone"
+        value=""></field><field name="mobile_phone" id="mobile_phone" value=""></field><field
+        name="email" id="email" value="fake.pamela39@example.com"></field><field name="org_rec"
+        id="org_rec" value="-Fallback-scrubbed-o"></field><field name="donor_type"
+        id="donor_type" value="-Fallback-scrubbed-Vy"></field><field name="nomail"
+        id="nomail" value="-Fallback-scrubbed-o"></field><field name="nomail_reason"
+        id="nomail_reason" value=""></field><field name="narrative" id="narrative"
+        value=""></field><field name="tag_date" id="tag_date" value=""></field><field
+        name="initial_gift_date" id="initial_gift_date" value="04/26/1980"></field><field
+        name="last_contrib_date" id="last_contrib_date" value="-Fallback-scrubbed-qyVHTrHio"></field><field
+        name="last_contrib_amt" id="last_contrib_amt" value="4647"></field><field
+        name="ytd" id="ytd" value="7771"></field><field name="ly_ytd" id="ly_ytd"
+        value="7771"></field><field name="ly2_ytd" id="ly2_ytd" value="4647"></field><field
+        name="ly3_ytd" id="ly3_ytd" value="3340"></field><field name="ly4_ytd" id="ly4_ytd"
+        value="7771"></field><field name="ly5_ytd" id="ly5_ytd" value="4647"></field><field
+        name="ly6_ytd" id="ly6_ytd" value="7771"></field><field name="cytd" id="cytd"
+        value="7771"></field><field name="ly_cytd" id="ly_cytd" value="7771"></field><field
+        name="ly2_cytd" id="ly2_cytd" value="4647"></field><field name="ly3_cytd"
+        id="ly3_cytd" value="3340"></field><field name="ly4_cytd" id="ly4_cytd" value="7771"></field><field
+        name="ly5_cytd" id="ly5_cytd" value="4647"></field><field name="ly6_cytd"
+        id="ly6_cytd" value="7771"></field><field name="autocalc1" id="autocalc1"
+        value="7771"></field><field name="autocalc2" id="autocalc2" value="7771"></field><field
+        name="autocalc3" id="autocalc3" value="7771"></field><field name="gift_total"
+        id="gift_total" value="3953"></field><field name="gifts" id="gifts" value="6327"></field><field
+        name="max_date" id="max_date" value="-Fallback-scrubbed-FtGthWKw"></field><field
+        name="max_amt" id="max_amt" value="9334"></field><field name="avg_amt" id="avg_amt"
+        value="3733.20992451777"></field><field name="yrs_donated" id="yrs_donated"
+        value="5082"></field><field name="created_by" id="created_by" value="-Fallback-scrubbed-AyPgZV"></field><field
+        name="created_date" id="created_date" value="-Fallback-scrubbed-ousdHHCa"></field><field
+        name="modified_by" id="modified_by" value="-Fallback-scrubbed-NUPPiLk"></field><field
+        name="modified_date" id="modified_date" value="-Fallback-scrubbed-sGahcuAiF"></field><field
+        name="donor_rcpt_type" id="donor_rcpt_type" value=""></field><field name="address3"
+        id="address3" value=""></field><field name="address4" id="address4" value=""></field><field
+        name="ukcounty" id="ukcounty" value=""></field><field name="gift_aid_eligible"
+        id="gift_aid_eligible" value=""></field><field name="initial_temp_record_id"
+        id="initial_temp_record_id" value="8805"></field><field name="frequent_temp_record_id"
+        id="frequent_temp_record_id" value=""></field><field name="recent_temp_record_id"
+        id="recent_temp_record_id" value="6679"></field><field name="import_id" id="import_id"
+        value=""></field><field name="receipt_delivery" id="receipt_delivery" value="-Fallback-scrubbed-P"></field><field
+        name="no_email" id="no_email" value="-Fallback-scrubbed-o"></field><field
+        name="no_email_reason" id="no_email_reason" value=""></field><field name="email_type"
+        id="email_type" value=""></field><field name="email_status" id="email_status"
+        value="-Fallback-scrubbed-ziEvfs"></field><field name="email_status_date"
+        id="email_status_date" value="-Fallback-scrubbed-ercvNzbP"></field><field
+        name="opt_out_source" id="opt_out_source" value=""></field><field name="opt_out_reason"
+        id="opt_out_reason" value=""></field><field name="CC_donor_import_time" id="CC_donor_import_time"
+        value=""></field><field name="cc_contact_id" id="cc_contact_id" value=""></field><field
+        name="wl_import_id" id="wl_import_id" value="7771"></field><field name="WL_Action"
+        id="WL_Action" value="-Fallback-scrubbed-C"></field><field name="geocoding_lattitude"
+        id="geocoding_lattitude" value=""></field><field name="geocoding_longitude"
+        id="geocoding_longitude" value=""></field><field name="quickbooks_customer_id"
+        id="quickbooks_customer_id" value=""></field><field name="dp_record_type"
+        id="dp_record_type" value="-Fallback-scrubbed-C"></field><field name="DPI_RFM_ASOFDATE"
+        id="DPI_RFM_ASOFDATE" value="-Fallback-scrubbed-vDXATbhIA"></field><field
+        name="DPI_RQUINTILE" id="DPI_RQUINTILE" value="6327"></field><field name="DPI_FQUINTILE"
+        id="DPI_FQUINTILE" value="6117"></field><field name="DPI_MQUINTILE" id="DPI_MQUINTILE"
+        value="7723"></field><field name="DPI_RFM_COMB" id="DPI_RFM_COMB" value="9969"></field><field
+        name="DPI_RFM_P_SEG" id="DPI_RFM_P_SEG" value="-Fallback-scrubbed-KXqXvWwGOfYxRETgso"></field><field
+        name="DPI_RFM_U_SEG" id="DPI_RFM_U_SEG" value="-Fallback-scrubbed-FBcZD"></field><field
+        name="DPI_RFM_AFP" id="DPI_RFM_AFP" value="5879"></field><field name="internal_modified_date"
+        id="internal_modified_date" value="10/2/2026 12:58:52 PM"></field><field name="last_name_canon"
+        id="last_name_canon" value="Fake-Pittman"></field><field name="first_name_canon"
+        id="first_name_canon" value="Fake-John"></field><field name="opt_line_canon"
+        id="opt_line_canon" value=""></field></record><record><field name="donor_id"
+        id="donor_id" value="5082"></field><field name="first_name" id="first_name"
+        value="Fake-John"></field><field name="last_name" id="last_name" value="Fake-Maxwell"></field><field
+        name="middle_name" id="middle_name" value=""></field><field name="suffix"
+        id="suffix" value=""></field><field name="title" id="title" value="-Fallback-scrubbed-pmz"></field><field
+        name="salutation" id="salutation" value="-Fallback-scrubbed-MuUrhBzyh"></field><field
+        name="prof_title" id="prof_title" value=""></field><field name="opt_line"
+        id="opt_line" value=""></field><field name="address" id="address" value="Fake-0313
+        Brian Divide"></field><field name="address2" id="address2" value=""></field><field
+        name="city" id="city" value="Fake-West Collin"></field><field name="state"
+        id="state" value="-Fallback-scrubbed-AF"></field><field name="zip" id="zip"
+        value="09115"></field><field name="country" id="country" value=""></field><field
+        name="address_type" id="address_type" value=""></field><field name="home_phone"
+        id="home_phone" value=""></field><field name="business_phone" id="business_phone"
+        value=""></field><field name="fax_phone" id="fax_phone" value=""></field><field
+        name="mobile_phone" id="mobile_phone" value=""></field><field name="email"
+        id="email" value="fake.williamsjessica@example.com"></field><field name="org_rec"
+        id="org_rec" value="-Fallback-scrubbed-o"></field><field name="donor_type"
+        id="donor_type" value="-Fallback-scrubbed-Vy"></field><field name="nomail"
+        id="nomail" value="-Fallback-scrubbed-o"></field><field name="nomail_reason"
+        id="nomail_reason" value=""></field><field name="narrative" id="narrative"
+        value="-Fallback-scrubbed-izwHbtKFKBnedeehFQvAnpxZuxcJNpaJBfNMxraUEMCMKzPZWjZhqjYEYKddoFZewbYaCJqCefR"></field><field
+        name="tag_date" id="tag_date" value=""></field><field name="initial_gift_date"
+        id="initial_gift_date" value="-Fallback-scrubbed-uHTMAoHk"></field><field
+        name="last_contrib_date" id="last_contrib_date" value="-Fallback-scrubbed-bZFarLRCz"></field><field
+        name="last_contrib_amt" id="last_contrib_amt" value="4647"></field><field
+        name="ytd" id="ytd" value="7771"></field><field name="ly_ytd" id="ly_ytd"
+        value="7771"></field><field name="ly2_ytd" id="ly2_ytd" value="7771"></field><field
+        name="ly3_ytd" id="ly3_ytd" value="7771"></field><field name="ly4_ytd" id="ly4_ytd"
+        value="7771"></field><field name="ly5_ytd" id="ly5_ytd" value="675"></field><field
+        name="ly6_ytd" id="ly6_ytd" value="9221"></field><field name="cytd" id="cytd"
+        value="7771"></field><field name="ly_cytd" id="ly_cytd" value="7771"></field><field
+        name="ly2_cytd" id="ly2_cytd" value="7771"></field><field name="ly3_cytd"
+        id="ly3_cytd" value="7771"></field><field name="ly4_cytd" id="ly4_cytd" value="7771"></field><field
+        name="ly5_cytd" id="ly5_cytd" value="675"></field><field name="ly6_cytd" id="ly6_cytd"
+        value="9221"></field><field name="autocalc1" id="autocalc1" value="9221"></field><field
+        name="autocalc2" id="autocalc2" value="7771"></field><field name="autocalc3"
+        id="autocalc3" value="7771"></field><field name="gift_total" id="gift_total"
+        value="8827"></field><field name="gifts" id="gifts" value="2512"></field><field
+        name="max_date" id="max_date" value="-Fallback-scrubbed-uHTMAoHk"></field><field
+        name="max_amt" id="max_amt" value="555"></field><field name="avg_amt" id="avg_amt"
+        value="9334"></field><field name="yrs_donated" id="yrs_donated" value="6117"></field><field
+        name="created_by" id="created_by" value="-Fallback-scrubbed-XhxpRbR"></field><field
+        name="created_date" id="created_date" value="-Fallback-scrubbed-wvhnXBdTo"></field><field
+        name="modified_by" id="modified_by" value="-Fallback-scrubbed-NUPPiLk"></field><field
+        name="modified_date" id="modified_date" value="-Fallback-scrubbed-sGahcuAiF"></field><field
+        name="donor_rcpt_type" id="donor_rcpt_type" value=""></field><field name="address3"
+        id="address3" value=""></field><field name="address4" id="address4" value=""></field><field
+        name="ukcounty" id="ukcounty" value=""></field><field name="gift_aid_eligible"
+        id="gift_aid_eligible" value=""></field><field name="initial_temp_record_id"
+        id="initial_temp_record_id" value="4680"></field><field name="frequent_temp_record_id"
+        id="frequent_temp_record_id" value=""></field><field name="recent_temp_record_id"
+        id="recent_temp_record_id" value="9910"></field><field name="import_id" id="import_id"
+        value=""></field><field name="receipt_delivery" id="receipt_delivery" value="-Fallback-scrubbed-P"></field><field
+        name="no_email" id="no_email" value="-Fallback-scrubbed-o"></field><field
+        name="no_email_reason" id="no_email_reason" value=""></field><field name="email_type"
+        id="email_type" value=""></field><field name="email_status" id="email_status"
+        value="-Fallback-scrubbed-fmagjrN"></field><field name="email_status_date"
+        id="email_status_date" value="-Fallback-scrubbed-psKfviys"></field><field
+        name="opt_out_source" id="opt_out_source" value=""></field><field name="opt_out_reason"
+        id="opt_out_reason" value=""></field><field name="CC_donor_import_time" id="CC_donor_import_time"
+        value=""></field><field name="cc_contact_id" id="cc_contact_id" value=""></field><field
+        name="wl_import_id" id="wl_import_id" value="7771"></field><field name="WL_Action"
+        id="WL_Action" value="-Fallback-scrubbed-C"></field><field name="geocoding_lattitude"
+        id="geocoding_lattitude" value=""></field><field name="geocoding_longitude"
+        id="geocoding_longitude" value=""></field><field name="quickbooks_customer_id"
+        id="quickbooks_customer_id" value="8186"></field><field name="dp_record_type"
+        id="dp_record_type" value="-Fallback-scrubbed-C"></field><field name="DPI_RFM_ASOFDATE"
+        id="DPI_RFM_ASOFDATE" value="-Fallback-scrubbed-vIHdyAuCg"></field><field
+        name="DPI_RQUINTILE" id="DPI_RQUINTILE" value="5082"></field><field name="DPI_FQUINTILE"
+        id="DPI_FQUINTILE" value="6117"></field><field name="DPI_MQUINTILE" id="DPI_MQUINTILE"
+        value="6117"></field><field name="DPI_RFM_COMB" id="DPI_RFM_COMB" value="4118"></field><field
+        name="DPI_RFM_P_SEG" id="DPI_RFM_P_SEG" value="-Fallback-scrubbed-UfoIigKLthuI"></field><field
+        name="DPI_RFM_U_SEG" id="DPI_RFM_U_SEG" value="-Fallback-scrubbed-FBcZD"></field><field
+        name="DPI_RFM_AFP" id="DPI_RFM_AFP" value="6512"></field><field name="internal_modified_date"
+        id="internal_modified_date" value="10/2/2026 12:58:52 PM"></field><field name="last_name_canon"
+        id="last_name_canon" value="Fake-Maxwell"></field><field name="first_name_canon"
+        id="first_name_canon" value="Fake-John"></field><field name="opt_line_canon"
+        id="opt_line_canon" value=""></field></record><record><field name="donor_id"
+        id="donor_id" value="7723"></field><field name="first_name" id="first_name"
+        value="Fake-John"></field><field name="last_name" id="last_name" value="Fake-Lawrence"></field><field
+        name="middle_name" id="middle_name" value=""></field><field name="suffix"
+        id="suffix" value=""></field><field name="title" id="title" value=""></field><field
+        name="salutation" id="salutation" value="-Fallback-scrubbed-cpAwJUrIcX"></field><field
+        name="prof_title" id="prof_title" value=""></field><field name="opt_line"
+        id="opt_line" value="-Fallback-scrubbed-uYtVEYJpxbrBS"></field><field name="address"
+        id="address" value="Fake-32163 Wilson Drives"></field><field name="address2"
+        id="address2" value=""></field><field name="city" id="city" value="Fake-North
+        David"></field><field name="state" id="state" value="-Fallback-scrubbed-AF"></field><field
+        name="zip" id="zip" value="17810"></field><field name="country" id="country"
+        value=""></field><field name="address_type" id="address_type" value="-Fallback-scrubbed-bpQP"></field><field
+        name="home_phone" id="home_phone" value="555-0169"></field><field name="business_phone"
+        id="business_phone" value=""></field><field name="fax_phone" id="fax_phone"
+        value=""></field><field name="mobile_phone" id="mobile_phone" value=""></field><field
+        name="email" id="email" value=""></field><field name="org_rec" id="org_rec"
+        value="-Fallback-scrubbed-W"></field><field name="donor_type" id="donor_type"
+        value="-Fallback-scrubbed-XM"></field><field name="nomail" id="nomail" value="-Fallback-scrubbed-o"></field><field
+        name="nomail_reason" id="nomail_reason" value="-Fallback-scrubbed-gp"></field><field
+        name="narrative" id="narrative" value=""></field><field name="tag_date" id="tag_date"
+        value=""></field><field name="initial_gift_date" id="initial_gift_date" value="-Fallback-scrubbed-ELjpHmlvF"></field><field
+        name="last_contrib_date" id="last_contrib_date" value="05/31/1975"></field><field
+        name="last_contrib_amt" id="last_contrib_amt" value="8790"></field><field
+        name="ytd" id="ytd" value="7771"></field><field name="ly_ytd" id="ly_ytd"
+        value="7771"></field><field name="ly2_ytd" id="ly2_ytd" value="7771"></field><field
+        name="ly3_ytd" id="ly3_ytd" value="7771"></field><field name="ly4_ytd" id="ly4_ytd"
+        value="8790"></field><field name="ly5_ytd" id="ly5_ytd" value="7771"></field><field
+        name="ly6_ytd" id="ly6_ytd" value="965"></field><field name="cytd" id="cytd"
+        value="7771"></field><field name="ly_cytd" id="ly_cytd" value="7771"></field><field
+        name="ly2_cytd" id="ly2_cytd" value="7771"></field><field name="ly3_cytd"
+        id="ly3_cytd" value="7771"></field><field name="ly4_cytd" id="ly4_cytd" value="8790"></field><field
+        name="ly5_cytd" id="ly5_cytd" value="7771"></field><field name="ly6_cytd"
+        id="ly6_cytd" value="965"></field><field name="autocalc1" id="autocalc1" value="965"></field><field
+        name="autocalc2" id="autocalc2" value="7771"></field><field name="autocalc3"
+        id="autocalc3" value="7771"></field><field name="gift_total" id="gift_total"
+        value="3269"></field><field name="gifts" id="gifts" value="5082"></field><field
+        name="max_date" id="max_date" value="05/31/1975"></field><field name="max_amt"
+        id="max_amt" value="8790"></field><field name="avg_amt" id="avg_amt" value="1497"></field><field
+        name="yrs_donated" id="yrs_donated" value="5082"></field><field name="created_by"
+        id="created_by" value="-Fallback-scrubbed-AyPgZV"></field><field name="created_date"
+        id="created_date" value=""></field><field name="modified_by" id="modified_by"
+        value="-Fallback-scrubbed-NUPPiLk"></field><field name="modified_date" id="modified_date"
+        value="-Fallback-scrubbed-sGahcuAiF"></field><field name="donor_rcpt_type"
+        id="donor_rcpt_type" value=""></field><field name="address3" id="address3"
+        value=""></field><field name="address4" id="address4" value=""></field><field
+        name="ukcounty" id="ukcounty" value=""></field><field name="gift_aid_eligible"
+        id="gift_aid_eligible" value=""></field><field name="initial_temp_record_id"
+        id="initial_temp_record_id" value="9418"></field><field name="frequent_temp_record_id"
+        id="frequent_temp_record_id" value=""></field><field name="recent_temp_record_id"
+        id="recent_temp_record_id" value="3749"></field><field name="import_id" id="import_id"
+        value=""></field><field name="receipt_delivery" id="receipt_delivery" value="-Fallback-scrubbed-P"></field><field
+        name="no_email" id="no_email" value="-Fallback-scrubbed-o"></field><field
+        name="no_email_reason" id="no_email_reason" value=""></field><field name="email_type"
+        id="email_type" value=""></field><field name="email_status" id="email_status"
+        value=""></field><field name="email_status_date" id="email_status_date" value=""></field><field
+        name="opt_out_source" id="opt_out_source" value=""></field><field name="opt_out_reason"
+        id="opt_out_reason" value=""></field><field name="CC_donor_import_time" id="CC_donor_import_time"
+        value=""></field><field name="cc_contact_id" id="cc_contact_id" value=""></field><field
+        name="wl_import_id" id="wl_import_id" value="7771"></field><field name="WL_Action"
+        id="WL_Action" value="-Fallback-scrubbed-C"></field><field name="geocoding_lattitude"
+        id="geocoding_lattitude" value=""></field><field name="geocoding_longitude"
+        id="geocoding_longitude" value=""></field><field name="quickbooks_customer_id"
+        id="quickbooks_customer_id" value=""></field><field name="dp_record_type"
+        id="dp_record_type" value="-Fallback-scrubbed-C"></field><field name="DPI_RFM_ASOFDATE"
+        id="DPI_RFM_ASOFDATE" value="-Fallback-scrubbed-vDXATbhIA"></field><field
+        name="DPI_RQUINTILE" id="DPI_RQUINTILE" value="7723"></field><field name="DPI_FQUINTILE"
+        id="DPI_FQUINTILE" value="7723"></field><field name="DPI_MQUINTILE" id="DPI_MQUINTILE"
+        value="6117"></field><field name="DPI_RFM_COMB" id="DPI_RFM_COMB" value="3953"></field><field
+        name="DPI_RFM_P_SEG" id="DPI_RFM_P_SEG" value="-Fallback-scrubbed-IkToeFbDBJeVoRIdP"></field><field
+        name="DPI_RFM_U_SEG" id="DPI_RFM_U_SEG" value="-Fallback-scrubbed-GpHSapIWTEDBPiaH"></field><field
+        name="DPI_RFM_AFP" id="DPI_RFM_AFP" value="5879"></field><field name="internal_modified_date"
+        id="internal_modified_date" value="10/2/2026 12:58:51 PM"></field><field name="last_name_canon"
+        id="last_name_canon" value="Fake-Lawrence"></field><field name="first_name_canon"
+        id="first_name_canon" value="Fake-John"></field><field name="opt_line_canon"
+        id="opt_line_canon" value="-Fallback-scrubbed-uYtVEYJpxbrBS"></field></record></result>'
+    headers:
+      CF-RAY:
+      - a56700a0bf31b321-GRU
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/xml; charset=utf-8
+      Date:
+      - Fri, 06 Nov 2026 20:56:01 GMT
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '19468'
+    status:
+      code: 200
+      message: OK
+version: 1
