@@ -1,0 +1,258 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.34.2
+    method: GET
+    uri: https://www.donorperfect.net/prod/xmlrequest.asp/?action=SELECT+COUNT%28%2A%29+AS+estimated_record_count+FROM+DPADDRESS+dpa+JOIN+dp+dp+ON+dpa.donor_id+%3D+dp.donor_id+WHERE+internal_modified_date%3E%272026-10-01+00%3A00%3A01%27&internal_modified_date=2026-10-01+00%3A00%3A01
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <result><record><field name="estimated_record_count" id="estimated_record_count"
+        value="1491"></field></record></result>'
+    headers:
+      CF-RAY:
+      - a56700befbe31352-GRU
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/xml; charset=utf-8
+      Date:
+      - Fri, 06 Nov 2026 20:56:06 GMT
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '159'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Cookie:
+      - __cf_bm=eNKw_TJejEGtxJeIVehd_ij0pg5wJpta6RLRI5BED1o-1793998566.2340071-1.0.1.1-rJbw0Po3b1VVYAFJJ9Ei268FiBVCnyu9WH8.lF6pspFf3YRoWe_tLb6r7O3cNRPC3LuBosJlsroNtMr0GRHcuUi._ccnZjIievwEaF6nxgSFtxiZTApfgm08Hb5mGnyr;
+        ApplicationGatewayAffinity=3de169042a7abffeb697f263a05689cd; ApplicationGatewayAffinityCORS=3de169042a7abffeb697f263a05689cd
+      User-Agent:
+      - python-requests/2.34.2
+    method: GET
+    uri: https://www.donorperfect.net/prod/xmlrequest.asp/?action=SELECT+dpa.%2A%2C+dp.internal_modified_date+as+internal_modified_date+FROM+DPADDRESS+dpa+JOIN+dp+dp+ON+dpa.donor_id+%3D+dp.donor_id+WHERE+internal_modified_date%3E%272026-10-01+00%3A00%3A01%27+ORDER+BY+internal_modified_date+DESC+OFFSET+0+ROWS+FETCH+NEXT+100+ROWS+ONLY%3B&internal_modified_date=2026-10-01+00%3A00%3A01
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <result><record><field name="address_id" id="address_id" value="5495"></field><field
+        name="donor_id" id="donor_id" value="8471"></field><field name="opt_line"
+        id="opt_line" value=""></field><field name="address" id="address" value="Fake-86437
+        James Inlet"></field><field name="address2" id="address2" value="Fake-51790
+        Megan Islands Apt. 898"></field><field name="city" id="city" value="Fake-West
+        Tiffany"></field><field name="state" id="state" value="-Fallback-scrubbed-zl"></field><field
+        name="zip" id="zip" value="91353"></field><field name="country" id="country"
+        value="-Fallback-scrubbed-vg"></field><field name="address_type" id="address_type"
+        value="-Fallback-scrubbed-wApU"></field><field name="getmail" id="getmail"
+        value="-Fallback-scrubbed-N"></field><field name="created_by" id="created_by"
+        value="-Fallback-scrubbed-gmHfhyExGFaQBgoVy"></field><field name="created_date"
+        id="created_date" value="-Fallback-scrubbed-xNPRMafMM"></field><field name="modified_by"
+        id="modified_by" value="-Fallback-scrubbed-gmHfhyExGFaQBgoVy"></field><field
+        name="modified_date" id="modified_date" value="-Fallback-scrubbed-xNPRMafMM"></field><field
+        name="use_main_name" id="use_main_name" value="-Fallback-scrubbed-Y"></field><field
+        name="use_main_address" id="use_main_address" value="-Fallback-scrubbed-Y"></field><field
+        name="title" id="title" value=""></field><field name="first_name" id="first_name"
+        value="Fake-Patricia"></field><field name="last_name" id="last_name" value="Fake-Bean"></field><field
+        name="seasonal_from_date" id="seasonal_from_date" value=""></field><field
+        name="seasonal_to_date" id="seasonal_to_date" value=""></field><field name="suffix"
+        id="suffix" value=""></field><field name="prof_title" id="prof_title" value=""></field><field
+        name="salutation" id="salutation" value="Fake-Patricia"></field><field name="email"
+        id="email" value="fake.coltonsmith@example.com"></field><field name="home_phone"
+        id="home_phone" value=""></field><field name="business_phone" id="business_phone"
+        value=""></field><field name="fax_phone" id="fax_phone" value=""></field><field
+        name="mobile_phone" id="mobile_phone" value=""></field><field name="start_date"
+        id="start_date" value=""></field><field name="end_date" id="end_date" value=""></field><field
+        name="address3" id="address3" value=""></field><field name="address4" id="address4"
+        value=""></field><field name="ukcounty" id="ukcounty" value=""></field><field
+        name="import_id" id="import_id" value=""></field><field name="middle_name"
+        id="middle_name" value=""></field><field name="org_rec" id="org_rec" value="-Fallback-scrubbed-Y"></field><field
+        name="no_email" id="no_email" value="-Fallback-scrubbed-Y"></field><field
+        name="no_email_reason" id="no_email_reason" value=""></field><field name="email_type"
+        id="email_type" value=""></field><field name="email_status" id="email_status"
+        value=""></field><field name="email_status_date" id="email_status_date" value="-Fallback-scrubbed-ekURPZvF"></field><field
+        name="opt_out_source" id="opt_out_source" value=""></field><field name="opt_out_reason"
+        id="opt_out_reason" value=""></field><field name="cc_contact_id" id="cc_contact_id"
+        value=""></field><field name="wl_import_id" id="wl_import_id" value="7799"></field><field
+        name="geocoding_lattitude" id="geocoding_lattitude" value=""></field><field
+        name="geocoding_longitude" id="geocoding_longitude" value=""></field><field
+        name="last_name_canon" id="last_name_canon" value="Fake-Bean"></field><field
+        name="first_name_canon" id="first_name_canon" value="Fake-Patricia"></field><field
+        name="opt_line_canon" id="opt_line_canon" value=""></field><field name="internal_modified_date"
+        id="internal_modified_date" value="10/2/2026 12:58:52 PM"></field></record><record><field
+        name="address_id" id="address_id" value="522"></field><field name="donor_id"
+        id="donor_id" value="8471"></field><field name="opt_line" id="opt_line" value=""></field><field
+        name="address" id="address" value="Fake-503 Mccall Port Suite 114"></field><field
+        name="address2" id="address2" value="Fake-4382 Gonzales Meadows Suite 147"></field><field
+        name="city" id="city" value="Fake-West Tiffany"></field><field name="state"
+        id="state" value="-Fallback-scrubbed-gE"></field><field name="zip" id="zip"
+        value="53180"></field><field name="country" id="country" value="-Fallback-scrubbed-fd"></field><field
+        name="address_type" id="address_type" value="-Fallback-scrubbed-TGoE"></field><field
+        name="getmail" id="getmail" value="-Fallback-scrubbed-N"></field><field name="created_by"
+        id="created_by" value="-Fallback-scrubbed-gmHfhyExGFaQBgoVy"></field><field
+        name="created_date" id="created_date" value="-Fallback-scrubbed-xNPRMafMM"></field><field
+        name="modified_by" id="modified_by" value="-Fallback-scrubbed-gmHfhyExGFaQBgoVy"></field><field
+        name="modified_date" id="modified_date" value="-Fallback-scrubbed-xNPRMafMM"></field><field
+        name="use_main_name" id="use_main_name" value="-Fallback-scrubbed-Y"></field><field
+        name="use_main_address" id="use_main_address" value="-Fallback-scrubbed-Y"></field><field
+        name="title" id="title" value=""></field><field name="first_name" id="first_name"
+        value="Fake-Michelle"></field><field name="last_name" id="last_name" value="Fake-Baker"></field><field
+        name="seasonal_from_date" id="seasonal_from_date" value=""></field><field
+        name="seasonal_to_date" id="seasonal_to_date" value=""></field><field name="suffix"
+        id="suffix" value=""></field><field name="prof_title" id="prof_title" value=""></field><field
+        name="salutation" id="salutation" value="Fake-Michelle"></field><field name="email"
+        id="email" value="fake.emilybrown@example.com"></field><field name="home_phone"
+        id="home_phone" value=""></field><field name="business_phone" id="business_phone"
+        value=""></field><field name="fax_phone" id="fax_phone" value=""></field><field
+        name="mobile_phone" id="mobile_phone" value=""></field><field name="start_date"
+        id="start_date" value=""></field><field name="end_date" id="end_date" value=""></field><field
+        name="address3" id="address3" value=""></field><field name="address4" id="address4"
+        value=""></field><field name="ukcounty" id="ukcounty" value=""></field><field
+        name="import_id" id="import_id" value=""></field><field name="middle_name"
+        id="middle_name" value=""></field><field name="org_rec" id="org_rec" value="-Fallback-scrubbed-Y"></field><field
+        name="no_email" id="no_email" value="-Fallback-scrubbed-Y"></field><field
+        name="no_email_reason" id="no_email_reason" value=""></field><field name="email_type"
+        id="email_type" value=""></field><field name="email_status" id="email_status"
+        value=""></field><field name="email_status_date" id="email_status_date" value="-Fallback-scrubbed-ekURPZvF"></field><field
+        name="opt_out_source" id="opt_out_source" value=""></field><field name="opt_out_reason"
+        id="opt_out_reason" value=""></field><field name="cc_contact_id" id="cc_contact_id"
+        value=""></field><field name="wl_import_id" id="wl_import_id" value="7799"></field><field
+        name="geocoding_lattitude" id="geocoding_lattitude" value=""></field><field
+        name="geocoding_longitude" id="geocoding_longitude" value=""></field><field
+        name="last_name_canon" id="last_name_canon" value="Fake-Baker"></field><field
+        name="first_name_canon" id="first_name_canon" value="Fake-Michelle"></field><field
+        name="opt_line_canon" id="opt_line_canon" value=""></field><field name="internal_modified_date"
+        id="internal_modified_date" value="10/2/2026 12:58:52 PM"></field></record><record><field
+        name="address_id" id="address_id" value="9260"></field><field name="donor_id"
+        id="donor_id" value="2272"></field><field name="opt_line" id="opt_line" value="-Fallback-scrubbed-GlUUMfOedTCee"></field><field
+        name="address" id="address" value="Fake-892 Lee Corners Suite 580"></field><field
+        name="address2" id="address2" value=""></field><field name="city" id="city"
+        value="Fake-Gonzalezmouth"></field><field name="state" id="state" value="-Fallback-scrubbed-rr"></field><field
+        name="zip" id="zip" value="94218"></field><field name="country" id="country"
+        value=""></field><field name="address_type" id="address_type" value="-Fallback-scrubbed-KpzOGz"></field><field
+        name="getmail" id="getmail" value="-Fallback-scrubbed-Y"></field><field name="created_by"
+        id="created_by" value="-Fallback-scrubbed-SqbSYF"></field><field name="created_date"
+        id="created_date" value=""></field><field name="modified_by" id="modified_by"
+        value="-Fallback-scrubbed-oOOyBeiFCSuKCfCMqXBF"></field><field name="modified_date"
+        id="modified_date" value="-Fallback-scrubbed-HzoDlvqfnjMQGIbipEiHH"></field><field
+        name="use_main_name" id="use_main_name" value="-Fallback-scrubbed-Y"></field><field
+        name="use_main_address" id="use_main_address" value="-Fallback-scrubbed-Y"></field><field
+        name="title" id="title" value=""></field><field name="first_name" id="first_name"
+        value="Fake-Kimberly"></field><field name="last_name" id="last_name" value="Fake-Simmons"></field><field
+        name="seasonal_from_date" id="seasonal_from_date" value=""></field><field
+        name="seasonal_to_date" id="seasonal_to_date" value=""></field><field name="suffix"
+        id="suffix" value=""></field><field name="prof_title" id="prof_title" value=""></field><field
+        name="salutation" id="salutation" value="-Fallback-scrubbed-tmoOSFWHsk"></field><field
+        name="email" id="email" value=""></field><field name="home_phone" id="home_phone"
+        value="555-0108"></field><field name="business_phone" id="business_phone"
+        value=""></field><field name="fax_phone" id="fax_phone" value=""></field><field
+        name="mobile_phone" id="mobile_phone" value=""></field><field name="start_date"
+        id="start_date" value=""></field><field name="end_date" id="end_date" value=""></field><field
+        name="address3" id="address3" value=""></field><field name="address4" id="address4"
+        value=""></field><field name="ukcounty" id="ukcounty" value=""></field><field
+        name="import_id" id="import_id" value=""></field><field name="middle_name"
+        id="middle_name" value=""></field><field name="org_rec" id="org_rec" value="-Fallback-scrubbed-N"></field><field
+        name="no_email" id="no_email" value="-Fallback-scrubbed-Y"></field><field
+        name="no_email_reason" id="no_email_reason" value=""></field><field name="email_type"
+        id="email_type" value=""></field><field name="email_status" id="email_status"
+        value=""></field><field name="email_status_date" id="email_status_date" value="-Fallback-scrubbed-ekURPZvF"></field><field
+        name="opt_out_source" id="opt_out_source" value=""></field><field name="opt_out_reason"
+        id="opt_out_reason" value=""></field><field name="cc_contact_id" id="cc_contact_id"
+        value=""></field><field name="wl_import_id" id="wl_import_id" value="7799"></field><field
+        name="geocoding_lattitude" id="geocoding_lattitude" value=""></field><field
+        name="geocoding_longitude" id="geocoding_longitude" value=""></field><field
+        name="last_name_canon" id="last_name_canon" value="Fake-Simmons"></field><field
+        name="first_name_canon" id="first_name_canon" value="Fake-Kimberly"></field><field
+        name="opt_line_canon" id="opt_line_canon" value="-Fallback-scrubbed-GlUUMfOedTCee"></field><field
+        name="internal_modified_date" id="internal_modified_date" value="10/2/2026
+        12:58:51 PM"></field></record><record><field name="address_id" id="address_id"
+        value="9425"></field><field name="donor_id" id="donor_id" value="2272"></field><field
+        name="opt_line" id="opt_line" value="-Fallback-scrubbed-gcreevlMnCTIygw"></field><field
+        name="address" id="address" value="Fake-892 Lee Corners Suite 580"></field><field
+        name="address2" id="address2" value=""></field><field name="city" id="city"
+        value="Fake-Paulbury"></field><field name="state" id="state" value="-Fallback-scrubbed-rr"></field><field
+        name="zip" id="zip" value="94218"></field><field name="country" id="country"
+        value=""></field><field name="address_type" id="address_type" value=""></field><field
+        name="getmail" id="getmail" value="-Fallback-scrubbed-Y"></field><field name="created_by"
+        id="created_by" value="-Fallback-scrubbed-SqbSYF"></field><field name="created_date"
+        id="created_date" value="-Fallback-scrubbed-pVygPAopI"></field><field name="modified_by"
+        id="modified_by" value="-Fallback-scrubbed-eMnQLuCUeGsWdRUg"></field><field
+        name="modified_date" id="modified_date" value="-Fallback-scrubbed-pVygPAopI"></field><field
+        name="use_main_name" id="use_main_name" value="-Fallback-scrubbed-Y"></field><field
+        name="use_main_address" id="use_main_address" value="-Fallback-scrubbed-Y"></field><field
+        name="title" id="title" value=""></field><field name="first_name" id="first_name"
+        value="Fake-Kimberly"></field><field name="last_name" id="last_name" value="Fake-Simmons"></field><field
+        name="seasonal_from_date" id="seasonal_from_date" value=""></field><field
+        name="seasonal_to_date" id="seasonal_to_date" value=""></field><field name="suffix"
+        id="suffix" value=""></field><field name="prof_title" id="prof_title" value=""></field><field
+        name="salutation" id="salutation" value="-Fallback-scrubbed-KlSoNaHENujz"></field><field
+        name="email" id="email" value=""></field><field name="home_phone" id="home_phone"
+        value="555-0108"></field><field name="business_phone" id="business_phone"
+        value=""></field><field name="fax_phone" id="fax_phone" value=""></field><field
+        name="mobile_phone" id="mobile_phone" value=""></field><field name="start_date"
+        id="start_date" value=""></field><field name="end_date" id="end_date" value=""></field><field
+        name="address3" id="address3" value=""></field><field name="address4" id="address4"
+        value=""></field><field name="ukcounty" id="ukcounty" value=""></field><field
+        name="import_id" id="import_id" value=""></field><field name="middle_name"
+        id="middle_name" value=""></field><field name="org_rec" id="org_rec" value="-Fallback-scrubbed-N"></field><field
+        name="no_email" id="no_email" value="-Fallback-scrubbed-Y"></field><field
+        name="no_email_reason" id="no_email_reason" value=""></field><field name="email_type"
+        id="email_type" value=""></field><field name="email_status" id="email_status"
+        value=""></field><field name="email_status_date" id="email_status_date" value="-Fallback-scrubbed-ekURPZvF"></field><field
+        name="opt_out_source" id="opt_out_source" value=""></field><field name="opt_out_reason"
+        id="opt_out_reason" value=""></field><field name="cc_contact_id" id="cc_contact_id"
+        value=""></field><field name="wl_import_id" id="wl_import_id" value="7799"></field><field
+        name="geocoding_lattitude" id="geocoding_lattitude" value=""></field><field
+        name="geocoding_longitude" id="geocoding_longitude" value=""></field><field
+        name="last_name_canon" id="last_name_canon" value="Fake-Simmons"></field><field
+        name="first_name_canon" id="first_name_canon" value="Fake-Kimberly"></field><field
+        name="opt_line_canon" id="opt_line_canon" value="-Fallback-scrubbed-gcreevlMnCTIygw"></field><field
+        name="internal_modified_date" id="internal_modified_date" value="10/2/2026
+        12:58:51 PM"></field></record></result>'
+    headers:
+      CF-RAY:
+      - a56700c05ca51a8b-GRU
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/xml; charset=utf-8
+      Date:
+      - Fri, 06 Nov 2026 20:56:06 GMT
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '14853'
+    status:
+      code: 200
+      message: OK
+version: 1

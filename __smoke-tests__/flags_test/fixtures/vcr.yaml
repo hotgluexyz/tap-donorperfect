@@ -1,0 +1,131 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.34.2
+    method: GET
+    uri: https://www.donorperfect.net/prod/xmlrequest.asp/?action=SELECT+COUNT%28%2A%29+AS+estimated_record_count+FROM+dpflags+LEFT+JOIN+dpcodes+dc+ON+dc.code+%3D+dpflags.flag+AND+dc.field_name+%3D+%27FLAG%27+LEFT+JOIN+dp+ON+dp.donor_id+%3D+dpflags.donor_id+WHERE+internal_modified_date%3E%272026-10-01+00%3A00%3A01%27&internal_modified_date=2026-10-01+00%3A00%3A01
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <result><record><field name="estimated_record_count" id="estimated_record_count"
+        value="5724"></field></record></result>'
+    headers:
+      CF-RAY:
+      - a56700af2d131d1f-GRU
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/xml; charset=utf-8
+      Date:
+      - Fri, 06 Nov 2026 20:56:04 GMT
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '159'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Cookie:
+      - __cf_bm=ife2ECplRW1zLfRb9_6vE24hjPSvUmsiigictbP9Gl4-1793998563.710324-1.0.1.1-YjKh.P0gRF5gSHkciqWCqeK62RKKrNjR3DtLBYXxmN4fN4.MWkNspwSwkIUDGuGWnVcWELS7CEc.BKqTKhZITXPGi_UattJx3yEcW6GNnLFCH7.9mY.zC5w6dj5X2uqO;
+        ApplicationGatewayAffinity=3de169042a7abffeb697f263a05689cd; ApplicationGatewayAffinityCORS=3de169042a7abffeb697f263a05689cd
+      User-Agent:
+      - python-requests/2.34.2
+    method: GET
+    uri: https://www.donorperfect.net/prod/xmlrequest.asp/?action=SELECT+dpflags.%2A%2C+dc.description%2C+dc.inactive%2C+dc.start_date%2C+dc.end_date%2C+dc.comments%2C+dc.code_id%2C+dp.internal_modified_date+FROM+dpflags+LEFT+JOIN+dpcodes+dc+ON+dc.code+%3D+dpflags.flag+AND+dc.field_name+%3D+%27FLAG%27+LEFT+JOIN+dp+ON+dp.donor_id+%3D+dpflags.donor_id+WHERE+internal_modified_date%3E%272026-10-01+00%3A00%3A01%27+ORDER+BY+internal_modified_date+DESC+OFFSET+0+ROWS+FETCH+NEXT+100+ROWS+ONLY%3B&internal_modified_date=2026-10-01+00%3A00%3A01
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <result><record><field name="donor_id" id="donor_id" value="8173"></field><field
+        name="flag" id="flag" value="-Fallback-scrubbed-pRC"></field><field name="import_id"
+        id="import_id" value=""></field><field name="description" id="description"
+        value="-Fallback-scrubbed-OiLXBZ"></field><field name="inactive" id="inactive"
+        value="-Fallback-scrubbed-H"></field><field name="start_date" id="start_date"
+        value="-Fallback-scrubbed-EknjGIdyC"></field><field name="end_date" id="end_date"
+        value="-Fallback-scrubbed-bsMdSZFb"></field><field name="comments" id="comments"
+        value=""></field><field name="code_id" id="code_id" value="167"></field><field
+        name="internal_modified_date" id="internal_modified_date" value="10/2/2026
+        12:58:52 PM"></field></record><record><field name="donor_id" id="donor_id"
+        value="8173"></field><field name="flag" id="flag" value="-Fallback-scrubbed-SOA"></field><field
+        name="import_id" id="import_id" value=""></field><field name="description"
+        id="description" value="-Fallback-scrubbed-uhyKBnoGZeyxZnEmrukcb"></field><field
+        name="inactive" id="inactive" value="-Fallback-scrubbed-H"></field><field
+        name="start_date" id="start_date" value="-Fallback-scrubbed-qVsPXvKcE"></field><field
+        name="end_date" id="end_date" value="-Fallback-scrubbed-bsMdSZFb"></field><field
+        name="comments" id="comments" value=""></field><field name="code_id" id="code_id"
+        value="2399"></field><field name="internal_modified_date" id="internal_modified_date"
+        value="10/2/2026 12:58:52 PM"></field></record><record><field name="donor_id"
+        id="donor_id" value="8173"></field><field name="flag" id="flag" value="-Fallback-scrubbed-aGJKAZ"></field><field
+        name="import_id" id="import_id" value=""></field><field name="description"
+        id="description" value="-Fallback-scrubbed-xNNFHE"></field><field name="inactive"
+        id="inactive" value="-Fallback-scrubbed-H"></field><field name="start_date"
+        id="start_date" value="09/12/1977"></field><field name="end_date" id="end_date"
+        value="-Fallback-scrubbed-bsMdSZFb"></field><field name="comments" id="comments"
+        value=""></field><field name="code_id" id="code_id" value="3081"></field><field
+        name="internal_modified_date" id="internal_modified_date" value="10/2/2026
+        12:58:52 PM"></field></record><record><field name="donor_id" id="donor_id"
+        value="8173"></field><field name="flag" id="flag" value="-Fallback-scrubbed-vBB"></field><field
+        name="import_id" id="import_id" value=""></field><field name="description"
+        id="description" value="-Fallback-scrubbed-YEYFLlNIF"></field><field name="inactive"
+        id="inactive" value="-Fallback-scrubbed-J"></field><field name="start_date"
+        id="start_date" value="-Fallback-scrubbed-zkujMqRM"></field><field name="end_date"
+        id="end_date" value="-Fallback-scrubbed-bsMdSZFb"></field><field name="comments"
+        id="comments" value="-Fallback-scrubbed-UnpmvxLbAnYYCq"></field><field name="code_id"
+        id="code_id" value="649"></field><field name="internal_modified_date" id="internal_modified_date"
+        value="10/2/2026 12:58:52 PM"></field></record><record><field name="donor_id"
+        id="donor_id" value="6927"></field><field name="flag" id="flag" value="-Fallback-scrubbed-Loy"></field><field
+        name="import_id" id="import_id" value=""></field><field name="description"
+        id="description" value="-Fallback-scrubbed-IDZEsNMqP"></field><field name="inactive"
+        id="inactive" value="-Fallback-scrubbed-H"></field><field name="start_date"
+        id="start_date" value="-Fallback-scrubbed-IfiQuOChD"></field><field name="end_date"
+        id="end_date" value="-Fallback-scrubbed-bsMdSZFb"></field><field name="comments"
+        id="comments" value=""></field><field name="code_id" id="code_id" value="1915"></field><field
+        name="internal_modified_date" id="internal_modified_date" value="10/2/2026
+        12:58:51 PM"></field></record></result>'
+    headers:
+      CF-RAY:
+      - a56700b23a211a91-GRU
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/xml; charset=utf-8
+      Date:
+      - Fri, 06 Nov 2026 20:56:04 GMT
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '3782'
+    status:
+      code: 200
+      message: OK
+version: 1
