@@ -7,6 +7,7 @@ from hotglue_singer_sdk import typing as th
 from hotglue_singer_sdk.helpers.capabilities import AlertingLevel
 from hotglue_singer_sdk.tap_base import InvalidCredentialsError
 
+from tap_donorperfect.auth import DonorPerfectAuthenticator
 from tap_donorperfect.streams import (
     DonorAddressesStream,
     DonorsStream,
@@ -45,6 +46,10 @@ class TapDonorperfect(Tap):
 
     def discover_streams(self) -> list[Stream]:
         return [stream_class(tap=self) for stream_class in STREAM_TYPES]
+
+    @classmethod
+    def access_token_support(cls, connector=None):
+        return DonorPerfectAuthenticator, None
 
 
 if __name__ == "__main__":
